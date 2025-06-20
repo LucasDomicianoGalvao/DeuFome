@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deu Fome</title>
+  <link rel="stylesheet" href="css/style.css" /> <!--css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /> <!--icones do font-->
+  <link rel="icon" href="/ImagensHome/logo-azul.png" /> <!--favicon-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> <!--bootstrap-->
+</head>
+
+<body>
+  <header>
+    <div class="container-header">
+      <img src="ImagensHome/logo-azul.png" alt="Logo Deu Fome" class="logo" />
+
+<div class="menu-toggle" onclick="toggleMenu()">
+  &#9776;
+</div>
+<!-- Botão do menu hambúrguerr (só aparece no mobile) -->
+
+      <nav class="menu">
+        <a href="/index.html" class="home-link">Home</a>
+        <a href="/QuemSomos.html" class="home-link">Quem Somos</a>
+        <a href="/Contato.html" class="home-link">Contato</a>
+
+        <div class="dropdown">
+          <button class="dropbtn" id="dropbtn">Receitas <i class="fa fa-caret-down"></i></button>
+          <div class="dropdown-content" id="dropdown-content">
+            <a href="/paes/paes.html">Pão e Bolos</a>
+            <a href="/massas/massas.html">Massas</a>
+            <a href="/legumes/legumes.html">Legumes</a>
+            <a href="/carnes/carnes.html">Carnes</a>
+            <a href="/saladas/saladas.html">Saladas</a>
+            <a href="/sobremesa/sobremesa.html">Sobremesas</a>
+          </div>
+        </div>
+      </nav>
+
+      <form class="barra-pesquisa">
+        <input type="text" placeholder="Procurar receita..." />
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </header>
+<!--botao nao esta em funcionamento-->
+
+  <main>
+    <p class="parag-index">
+      Do café fresquinho ao jantar especial, no Sabor da Casa você encontra receitas práticas, rápidas e também pratos
+      elaborados para surpreender em qualquer ocasião. Redescubra o prazer de cozinhar com amor e leve mais sabor para
+      todos os momentos do seu dia!
+    </p>
+
+    
+      <section class="categorias-grid">
+
+        <a href="/paes/paes.html" class="categoria-bloco">
+          <img src="ImagensHome/paocaseiro.jpg" alt="Pães e Bolos">
+          <div class="etiqueta">Pães e Bolos</div>
+        </a>
+        <a href="/massas/massas.html" class="categoria-bloco">
+          <img src="ImagensHome/lasanha.png" alt="Massas">
+          <div class="etiqueta">Massas</div>
+        </a>
+        <a href="/legumes/legumes.html" class="categoria-bloco">
+          <img src="ImagensHome/legumes.jpg" alt="Legumes">
+          <div class="etiqueta">Legumes</div>
+        </a>
+        <a href="/carnes/carnes.html" class="categoria-bloco">
+          <img src="ImagensHome/carnes.jpeg" alt="Carnes">
+          <div class="etiqueta">Carnes</div>
+        </a>
+        <a href="/saladas/saladas.html" class="categoria-bloco">
+          <img src="ImagensHome/saladas.png" alt="Saladas">
+          <div class="etiqueta">Saladas</div>
+        </a>
+        <a href="/sobremesa/sobremesa.html" class="categoria-bloco">
+          <img src="ImagensHome/bolo.jpeg" alt="Sobremesas">
+          <div class="etiqueta">Sobremesas</div>
+        </a>
+
+      </section>
+    
+
+    </a>
+    </div>
+    <section class="destaques-lowcarb">
+      <h2>Receitas Low Carb em Destaque</h2>
+      <div class="cards-lowcarb">
+
+        <a href="/lowcarb/Omelete.html" class="card-receita">
+          <img src="imagensLowCarb/omelete-de-espinafre.jpg" alt="Omelete de Espinafre com Queijo" />
+          <h3>Omelete de Espinafre com Queijo</h3>
+        </a>
+
+        <a href="/lowcarb/frango.html" class="card-receita">
+          <img src="imagensLowCarb/frango-abobrinha.jpg" alt="Frango Cremoso com Abobrinha" />
+          <h3>Frango Cremoso com Abobrinha</h3>
+        </a>
+
+        <a href="/lowcarb/pizza.html" class="card-receita">
+          <img src="imagensLowCarb/pizza.jpg" alt="Mini Pizza de Berinjela" />
+          <h3>Mini Pizza de Berinjela</h3>
+        </a>
+
+      </div>
+    </section>
+  </main>
+  
+</section>
+<section class="dicas-cozinha">
+  <h2>Dicas para cozinhar como um chef</h2>
+  <p class="descricao">Truques, técnicas e curiosidades para facilitar seu dia a dia na cozinha.</p>
+  <ul class="lista-dicas">
+    <li>
+      <h3>Como preparar um arroz soltinho: 5 passos essenciais</h3>
+      <p>Descubra o segredo para um arroz perfeito, soltinho e saboroso, que combina com qualquer prato.</p>
+    </li>
+    <li>
+      <h3>O segredo para um bolo fofinho e saboroso</h3>
+      <p>Aprenda técnicas simples para deixar seu bolo macio e delicioso toda vez que assar.</p>
+    </li>
+    <li>
+      <h3>Temperos que transformam qualquer receita</h3>
+      <p>Conheça os temperos essenciais que vão elevar o sabor das suas refeições.</p>
+    </li>
+    <li>
+      <h3>Erros comuns ao fazer massas e como evitá-los</h3>
+      <p>Evite os deslizes mais comuns na hora de preparar massas e tenha resultados incríveis.</p>
+    </li>
+  </ul>
+  <a href="dicasdecozinha/dicasdecozinha.html" class="botao-ver-mais">
+  Dicas de cozinha
+</a>
+
+</section>
+
+  <h1>Do simples ao saboroso: receitas rápidas e deliciosas para o seu dia a dia !
+  </h1>
+  <br>
+  <p class="parag-index">
+
+    No Deu Fome, a gente resolve aquela vontade de comer com receitas fáceis, gostosas e com aquele jeitinho de comida
+    feita na casa da vó. Todo dia tem dica nova pra você se virar na cozinha sem estresse – seja uma receita rápida,
+    fit, vegana, sem glúten ou aquela gordice que abraça o estômago. Aqui tem de tudo: do café da manhã reforçado ao
+    jantar caprichado, passando por lanchinhos práticos e sobremesas que roubam a cena. Se bateu a fome, já sabe: cola
+    com a gente, abre a geladeira e bora cozinhar !
+
+  </p>
+  <br>
+
+  <footer>
+    <div class="footer-top">
+      <h2>DeuFome.com</h2>
+      <p>Redes sociais</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; Deu Fome 2025</span>
+      <span class="footer-divider">|</span>
+      <a href="/QuemSomos.html">Quem Somos</a>
+      <span class="footer-divider">|</span>
+      <a href="/Contato.html">Fale Conosco</a>
+      <span class="footer-divider">|</span>
+      <a href="#">Termos e Condições</a>
+      <span class="footer-divider">|</span>
+      <a href="#">Política de Privacidade</a>
+      <span class="footer-divider">|</span>
+      <a href="#">Política de Cookies</a>
+    </div>
+  </footer>
+
+  <script src="/js/script.js"></script>
+  <!-- adicionado esse script para funcionamento do menu hamburguer (só aparece no mobile) -->
+  <script>
+  function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('active');
+  }
+</script>
+
+</body>
+
+</html>
