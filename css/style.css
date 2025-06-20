@@ -1,0 +1,836 @@
+header {
+  background-color: #FF9800;
+  padding: 5px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.logo {
+  height: 110px; /* ou o tamanho desejado */
+  transform: scale(1.2); /* aumenta a logo visualmente */
+  transform-origin: left center; /* mantém alinhada na horizontal */
+}
+
+
+/* Menu */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+.home-link {
+  position: relative;
+  padding-bottom: 4px; /* espaço para a linha */
+  transition: color 0.3s;
+}
+
+.home-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 3px;
+  background-color: white; /* cor da linha */
+  transition: width 0.3s ease;
+}
+
+.home-link:hover::after {
+  width: 100%;
+}
+
+
+
+.home-link {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s, background-color 0.3s;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.home-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background-color: #fff;
+  color: #FF9800;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dropbtn:hover {
+  background-color: #ffe0b2;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 180px;
+  top: 110%;
+  right: 0;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+  border-radius: 10px;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  padding: 12px 18px;
+  display: block;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #f5f5f5;
+}
+
+.show {
+  display: block;
+}
+
+/* Barra de pesquisa */
+.barra-pesquisa {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px #ddd;
+  margin-top: 10px;
+}
+
+.barra-pesquisa input[type="text"] {
+  border: none;
+  padding: 10px 16px;
+  font-size: 14px;
+  outline: none;
+  width: 200px;
+}
+
+.barra-pesquisa button {
+  background-color: #E65100;
+  border: none;
+  color: white;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .container-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .barra-pesquisa {
+    width: 100%;
+    justify-content: center;
+    margin-top: 15px;
+  }
+}
+
+
+  .menu a:hover {
+    background-color:  rgb(250, 146, 18);
+    border-radius: 4px;
+  }
+  h1 {
+    margin: 0 20px;
+    text-align: center;
+  
+  }
+  
+  main {
+    margin-top: 40px;
+    padding: 0 30px;
+  }
+  .parag-index{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    line-height: 1.7;
+    color: black;
+    margin: 0 50px 0 50px;
+  }
+   
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: black;
+    margin: 0 5px 0 5px;
+    text-align: justify;
+  }
+  
+  /* NOVO GRID PARA 6 CATEGORIAS */
+ .categorias-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 0 40px 20px 40px;
+  justify-items: center;
+}
+
+
+  
+  .categoria-bloco {
+    position: relative; /* ← ESSENCIAL para que a etiqueta fique sobre a imagem */
+    width: 350px;
+    height: 350px;
+    background-color: #fff3e0;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: 0.3s ease;
+  }
+  
+  
+  .categoria-bloco:hover {
+    transform: scale(1.05);
+  }
+  
+  .categoria-bloco img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  .etiqueta {
+    position: absolute;
+    bottom: 20px; /* Afasta um pouco da borda inferior */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza na horizontal */
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 8px 11px;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+    pointer-events: none; /* Garante que o clique passe para o link */
+  }
+  
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ctext y='30' font-size='30' opacity='0.20'%3E🍴🍽🍳%3C/text%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-color: #ecebe7;
+}
+
+.footer-top {
+  background-color:  rgb(250, 146, 18);
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer-top h2 {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #333;
+  
+}
+
+.footer-top p {
+  color: #666;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+}
+
+.footer-bottom {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.footer-bottom a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 8px;
+  color: #333;
+  background-color: #e0e0e0;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: #333;
+  color: #fff;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown {
+  margin-left: auto; /* empurra para a direita */
+}
+
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: white; 
+  padding: 0;
+  font-size: 18px; 
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s ease;
+}
+
+
+.dropbtn:hover, .dropbtn.active {
+  background-color:  #E65100 ;
+}
+
+.dropbtn i {
+  transition: transform 0.3s ease;
+}
+
+.dropbtn.active i {
+  transform: rotate(180deg);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 180px;
+  top: 110%;
+  right: 0;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+  border-radius: 10px;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+
+.dropdown-content a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color:  #FFB74D;
+}
+
+.dropdown-content i {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+.dropdown-content.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+   /* image-rendering: 169px 112px;*/
+
+.sob{
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 15px;
+}
+.categorias-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+img.Sobremesas {
+    border-radius: 10px;
+}
+
+.Ingred {
+    border-bottom: 1px solid rgb(255, 140, 0);
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    padding: 20px 0 20px 20px;
+}
+
+.Title {
+      display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    
+}
+.SubTitle {
+     font-size: x-large;
+     color: rgb(255, 140, 0);
+     display: flex;
+    justify-content: center; 
+     
+    
+}
+.ModPrep {
+    border-bottom: 1px solid rgb(255, 140, 0);
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    padding: 20px 0 20px 20px;
+}
+.Dica {
+    border-bottom: 1px solid rgb(255, 140, 0);
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    padding: 20px 0 20px 20px;
+   
+    
+
+}
+.Process {
+    font-size: 1.5rem;
+    font: weight bolder ;
+    display: flex;
+    justify-content: center;
+}
+
+.destaques-lowcarb {
+  padding: 2rem;
+  background-color: transparent;
+  text-align: center;
+}
+
+.destaques-lowcarb h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.cards-lowcarb {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.card-receita {
+  display: block;
+  width: 250px;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.2s;
+}
+
+.card-receita:hover {
+  transform: scale(1.03);
+}
+
+.card-receita img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card-receita h3 {
+  padding: 0.8rem;
+  font-size: 1.1rem;
+}
+.caixa-sobre { /* caixa do quem somos*/
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff8f0;
+  border: 2px solid #f0b27a;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.caixa-sobre h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #d35400;
+  text-align: center;
+}
+.contato-container {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fff8f0;
+  border: 2px solid #f0b27a;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.contato-container h2 {
+  text-align: center;
+  color: #d35400;
+  margin-bottom: 10px;
+}
+
+.contato-container p {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-contato { /* formulario de contato*/
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-contato label {
+  font-weight: bold;
+}
+
+.form-contato input,
+.form-contato textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.form-contato button {
+  background-color: #d35400;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-contato button:hover {
+  background-color: #e67e22;
+}
+
+.dicas-cozinha {
+  background-color: #fff8f0;
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 40px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #4a3c31;
+  text-align: center;
+}
+
+.dicas-cozinha h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #d35400;
+}
+
+.dicas-cozinha .descricao {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  font-style: italic;
+  color: #7a5c3c;
+  text-align: center;
+}
+
+/* Flex container para os itens em linha */
+.lista-dicas {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 0;
+  margin: 0 0 30px 0;
+  list-style: none;
+  align-items: flex-start; /* Alinha no topo, para o efeito ficar melhor */
+}
+
+.lista-dicas li {
+  background: #fdf3e7;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 200px;
+}
+
+/* Aqui a "escada" decrescente: primeiro o mais alto, último o mais baixo */
+.lista-dicas li:nth-child(1) {
+  transform: translateY(0);
+}
+.lista-dicas li:nth-child(2) {
+  transform: translateY(20px);
+}
+.lista-dicas li:nth-child(3) {
+  transform: translateY(40px);
+}
+.lista-dicas li:nth-child(4) {
+  transform: translateY(60px);
+}
+
+
+
+.lista-dicas h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #E65100;
+}
+
+.lista-dicas p {
+  font-size: 0.95rem;
+  line-height: 1.3;
+  color: #6e5437;
+}
+
+/* Botão centralizado */
+.botao-ver-mais {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #d35400;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.botao-ver-mais:hover {
+  background-color: #E65100;
+}
+
+
+dicas-cozinha {
+  background-color: #FFE0B2;
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 40px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #4a3c31;
+  text-align: center;
+}
+
+.dicas-cozinha h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #d35400;
+}
+
+.dicas-cozinha .descricao {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  font-style: italic;
+  color: #7a5c3c;
+}
+
+/* Flex container para os itens em linha */
+.lista-dicas {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 0;
+  margin: 0 0 30px 0;
+  list-style: none;
+  align-items: flex-start; /* Alinha no topo, para o efeito ficar melhor */
+}
+
+.lista-dicas li {
+  background: #fdf3e7;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 200px;
+}
+
+/* Aqui a "escada" decrescente: primeiro o mais alto, último o mais baixo, avaliar se compensa :) */
+.lista-dicas li:nth-child(1) {
+  transform: translateY(0);
+}
+.lista-dicas li:nth-child(2) {
+  transform: translateY(20px);
+}
+.lista-dicas li:nth-child(3) {
+  transform: translateY(40px);
+}
+.lista-dicas li:nth-child(4) {
+  transform: translateY(60px);
+}
+
+
+.lista-dicas h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #E65100;
+}
+
+.lista-dicas p {
+  font-size: 0.95rem;
+  line-height: 1.3;
+  color: #6e5437;
+}
+
+/* Botão centralizado */
+.botao-ver-mais {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #d35400;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+    margin-top: 10px;
+
+}
+
+.botao-ver-mais:hover {
+  background-color: #a23b00;
+}
+
+.dicas-cozinha h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #E65100;
+}
+
+.lista-dicas h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #E65100;
+}
+
+.pagina-dicas {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Botão hambúrguer - escondido no desktop */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile: mostrar hambúrguer, esconder menu inicialmente */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 999;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #FF9800;
+    padding: 15px 0;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+}
